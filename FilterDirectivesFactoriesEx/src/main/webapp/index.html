@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Start Page</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular-mocks.js"></script>
+        <script src="app.js"></script>
+        <style>
+            table {border-collapse: collapse; }
+            td { border: 1px solid black;height:30px;width: 30px;font-size: 28px;}
+            .dark{ background: lightgray;}
+        </style>
+    </head>
+    <body ng-app="myApp">
+
+        <table ng-controller="ChessCtrl">
+            <tr>
+                <td ng-class="{'dark':$even}" ng-repeat="sq in board track by $index" ng-bind-html="sq | Chess"></td>
+            </tr>
+        </table>
+        
+    <format-company></format-company>
+        
+    </body>
+</html>
